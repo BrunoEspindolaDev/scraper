@@ -76,8 +76,8 @@ const fillDataFromPage = async page => {
         .trim();
 
       const image = document
-        .querySelectorAll(`.NMjTrf img[decoding="async"]`)[0]
-        .getAttribute('src');
+        .querySelectorAll(`.NMjTrf img[decoding="async"]`)?.[0]
+        ?.getAttribute('src');
 
       const address = el
         .querySelector(
